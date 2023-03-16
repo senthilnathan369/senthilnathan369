@@ -11,14 +11,16 @@
         <label><b>User Name
         </b>
         </label>
-        <input type="text" name="Uname" id="Uname" placeholder="Username">
+        <input type="text" name="Uname" id="Uname" placeholder="Username" required>
         <br><br>
         <label><b>Password
         </b>
         </label>
-        <input type="Password" name="Pass" id="Pass" placeholder="Password">
+        <input type="Password" name="Pass" id="Pass" placeholder="Password" required>
         <br><br>
-        <input type="button" name="log" id="log" value="Log In Here">
+        <button>
+            <input type="button" name="log" id="log" value="Log In Here">
+        </button>
         <br><br>
         <input type="checkbox" id="check">
         <span>Remember me</span>
@@ -67,14 +69,12 @@ label{
 
 }
 #log{
-    width: 300px;
+    width: 295px;
     height: 30px;
     border: none;
-    border-radius: 17px;
+    border-radius: 5px;
     padding-left: 8px;
     color: blue;
-
-
 }
 span{
     color: rgb(236, 15, 15);
