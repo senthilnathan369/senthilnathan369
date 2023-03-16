@@ -1,13 +1,113 @@
 <!DOCTYPE html>
+<html>
 <head>
-    <title>
-        Who Gonna Be Rock
-    </title>
-    <body>
-        <form method="get" action="store">
-            <label>
-                <input type="name" id="name" placeholder="enter detail">
-            </label>
-        </form>
-    </body>
+    <title>Match Details</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
+<body>
+    <h2>MASTER BLASTER CRICKET GROUND</h2>
+    <img src="C:\Users\scien\OneDrive\Documents\GitHub\senthilnathan369\logo.jpeg" alt="Trulli" class="center"><br>
+    <div class="login">
+    <form id="text" method="get" action="login.php">
+        <label>Date
+            <input type="datetime-local" name="datetime-local" id="datetime-local">
+        </label>
+        <label><h1>Place: Kampaala patti</h1>
+            <h2>Saturday & sunday practice match available req details</h2>
+        </label>
+        <h3>Sunday Morning 7:30 AM 1st Ball</h3>
+        <label><b>Team Name
+        </b>
+        </label>
+        <input type="text" name="Uname" id="Uname" placeholder="Team Name" required>
+        <br><br>
+        
+        <h3>Sunday Morning 11:30 AM 1st Ball</h3>
+        <label><b>Team Name
+        </b>
+        </label>
+        <input type="text" name="Uname" id="Uname" placeholder="Team Name" required>
+        <br><br>
+        <h3>Sunday Morning 2:00 PM 1st Ball</h3>
+        <label><b>Team Name
+        </b>
+        </label>
+        <input type="text" name="Uname" id="Uname" placeholder="Team Name" required>
+        <br><br>
+    </form>
+</div>
+<style>
+    body
+{
+    margin: 0;
+    padding: 0;
+    background-color:#30a4f1ba;
+    font-family: 'Arial';
+}
+#img{
+    display: flex;
+    align-items: center;
+
+}
+.login{
+        width: 382px;
+        overflow: hidden;
+        margin: auto;
+        margin: 20 0 0 450px;
+        padding: 80px;
+        background: #83abe7;
+        border-radius: 30px ;
+
+}
+h2{
+    text-align: center;
+    color: #0804f3;
+    padding: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+label{
+    color: #7b08ff;
+    font-size: 17px;
+}
+#Uname{
+    width: 400px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    padding-left: 8px;
+}
+#Pass{
+    width: 400px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    padding-left: 8px;
+
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 10%;
+  height: 10%;
+}
+
+#log{
+    width: 295px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    padding-left: 8px;
+    color: blue;
+}
+span{
+    color: rgb(236, 15, 15);
+    font-size: 17px;
+}
+a{
+    float: right;
+    background-color: rgb(12, 221, 29);
+}
+</style>
+</body>
+</html>
