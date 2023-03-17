@@ -35,6 +35,29 @@
         <input type="text" name="Uname" id="Uname" placeholder="Team Name" required>
         <br><br>
     </form>
+    <?php echo "Some data from database here";?>
+    <button id="convert">
+        Convert to image
+        </button>
+        <div id="result">
+           <!-- Result will appear be here -->
+        </div>
+        <script type="text/javascript" src="C:\Users\scien\OneDrive\Documents\GitHub\senthilnathan369\html2canvas.js"></script>
+        <script>
+           //convert table to image            
+           function convertToImage() {
+              var resultDiv = document.getElementById("result");
+              html2canvas(document.getElementById("text"), {
+                  onrendered: function(canvas) {
+                      var img = canvas.toDataURL("image/png");
+                      result.innerHTML = '<a download="test.jpeg" href="'+img+'">test</a>';
+                      }
+              });
+           }        
+           //click event
+           var convertBtn = document.getElementById("convert");
+           convertBtn.addEventListener('click', convertToImage);
+        </script>
 </div>
 <style>
     body
