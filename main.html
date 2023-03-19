@@ -5,59 +5,58 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-    
     <h2>MASTER BLASTER CRICKET GROUND</h2>
     <img src="C:\Users\scien\OneDrive\Documents\GitHub\senthilnathan369\logo.jpeg" alt="Trulli" class="center"><br>
     <div class="login">
     <form id="input" method="get" action="login.php">
-        <table id="myTable" class="table table-bordered table-striped table-fixed">     
-        <label><h1>Place: Kampaala patti</h1>
-            <h2>Saturday & sunday practice match available req details</h2>
-        </label>
         <label>Date
             <input type="datetime-local" name="datetime-local" id="datetime-local">
         </label>
+        <label><h1>Place: Kampaala patti</h1>
+            <h2>Saturday & sunday practice match available req details</h2>
+        </label>
         <h3>Sunday Morning 7:30 AM 1st Ball</h3>
+        <table id="myTable" class="table table-bordered table-striped table-fixed">
             <thead>
-                <label><b>Team Name
-                </b>
-                </label>
-                <input type="text" name="Uname" id="Uname" placeholder="Team Name" required>
-                <br><br> 
-            </thead>
+               <th><label>Team Name
+            </b>
+            </label><input type="text" id="name" placeholder="Team Name"></th>
+            </thead><br>
             <thead>
-
-            </thead>
+               <th><label><b>Team Name
+            </b>
+            </label><input type="text" id="name" placeholder="Team Name"></th>
+            </thead><br>
+            <thead>
+               <th><label><b>Team Name
+            </b>
+            </label><input type="text" id="name" placeholder="Team Name"></th>
+            </thead><br>
             <?php echo "Some data from database here";?>   
          </table>
-
-
-        <?php echo "Some data from database here";?>
+         <button id="convert">
+         Convert to image
+         </button>
+         <div id="result">
+            <!-- Result will appear be here -->
+         </div>
+         <script type="text/javascript" src="C:\Users\scien\OneDrive\Documents\GitHub\senthilnathan369\html2canvas.js"></script>
+         <script>
+            //convert table to image            
+            function convertToImage() {
+               var resultDiv = document.getElementById("result");
+               html2canvas(document.getElementById("myTable"), {
+                   onrendered: function(canvas) {
+                       var img = canvas.toDataURL("image/png");
+                       result.innerHTML = '<a download="test.jpeg" href="'+img+'">test</a>';
+                       }
+               });
+            }        
+            //click event
+            var convertBtn = document.getElementById("convert");
+            convertBtn.addEventListener('click', convertToImage);
+         </script>
     </form>
-    
-    <button id="convert">
-        Convert to image
-        </button>
-        <div id="result">
-           <!-- Result will appear be here -->
-        </div>
-        <script type="text/javascript" src="C:\Users\scien\OneDrive\Documents\GitHub\senthilnathan369\html2canvas.js"></script>
-        <script>
-           //convert table to image            
-           function convertToImage() {
-              var resultDiv = document.getElementById("result");
-              html2canvas(document.getElementById("myTable"), {
-                  onrendered: function(canvas) {
-                      var img = canvas.toDataURL("image/png");
-                      result.innerHTML = '<a download="test.jpeg" href="'+img+'">test</a>';
-                      }
-              });
-           }        
-           //click event
-           var convertBtn = document.getElementById("convert");
-           convertBtn.addEventListener('click', convertToImage);
-        </script>
-</div>
 <style>
     body
 {
