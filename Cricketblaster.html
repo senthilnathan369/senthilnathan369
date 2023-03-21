@@ -6,12 +6,9 @@
 </head>
 <body>
     <h2>MASTER BLASTER CRICKET GROUND</h2>
-    <img src="logo.jpeg" alt="Trulli" class="center"><br>
+    <img src="./logo.jpeg" alt="masterblaster" class="center"><br>
     <div class="login">
     <form id="input" method="get" action="login.php">
-        <label>Date
-            <input type="datetime-local" name="datetime-local" id="datetime-local">
-        </label>
         <label><h1>Place: Kampaala patti</h1>
             <h2>Saturday & sunday practice match available req details</h2>
         </label>
@@ -21,10 +18,10 @@
 <style>
     body
 {
-    
-    background-color:#30a4f1ba;
+    margin: 0;
+    padding: 0;
     background-image: url("logo.jpeg");
-    justify-content: center;
+    background-color:#30a4f1ba;
     font-family: 'Arial';
 }
 #img{
@@ -88,43 +85,53 @@ span{
     font-size: 17px;
 }
 a{
-    float: right;
+    float: left;
     background-color: rgb(12, 221, 29);
+} 
+.inPut{
+align-items: center;
+background-image: url("logo.jpeg");
+border-radius: 8px;
+padding-left: 15px;
 }
-.table{
-    border-radius: 8px;
+.watch{
+align-items: center;
+border-radius: 8px;
+padding-left: 40px;
 }
 </style>
    <body>
-      <table id="myTable" class="table">
+
+      <table class="mytable" id="myTable" class="table table-bordered table-striped table-fixed">
          <thead>
-            <th><input class="table" type="text" id="name" placeholder="Team Name"></th>
+            <th><input class="inPut" itemscope="" type="text" id="name" placeholder="Team Name"></th>
+            <th><input class="inPut" type="text" id="name" placeholder="Team Name"></th>
          </thead>
          <thead>
-            <th><input type="text" id="name" placeholder="Team Name"></th>
+            <th><input class="inPut" type="text" id="name" placeholder="Team Name"></th>
+            <th><input class="inPut" type="text" id="name" placeholder="Team Name"></th>
          </thead>
          <thead>
-            <th><input type="text" id="name" placeholder="Team Name"></th>
+            <th><input class="inPut" type="text" id="name" placeholder="Team Name"></th>
+            <th><input class="inPut" type="text" id="name" placeholder="Team Name"></th>
          </thead>
          
          <thead>
             <th>
-                <input type="date" name="date" id="date">
-                <b><input type="time" name="time" id="time">
+                <input class="watch" type="date" name="date" id="date">
+                <b><input class="watch" type="time" name="time" id="time">
             </th>
          </thead>
          <?php echo "Some data from database here";?>   
       </table>
 
-      
-      
-      <button id="convert">
+      <button id="convert" style="align-items="right">
       Convert to image
-      </button>
+      </button><br><br>
       <div id="result">
          <!-- Result will appear be here -->
       </div>
-      <script type="text/javascript" src="C:\Users\scien\OneDrive\Documents\GitHub\senthilnathan369\html2canvas.js"></script>
+      <script type="text/javascript" src="./html2canvas.js"></script>
       <script>
          //convert table to image            
          function convertToImage() {
@@ -132,7 +139,7 @@ a{
             html2canvas(document.getElementById("myTable"), {
                 onrendered: function(canvas) {
                     var img = canvas.toDataURL("image/png");
-                    result.innerHTML = '<a download="test.jpeg" href="'+img+'">test</a>';
+                    result.innerHTML = '<a download="test.jpeg" href="'+img+'">Download</a>';
                     }
             });
          }        
