@@ -6,11 +6,11 @@
 </head>
 <body>
     <h2>MASTER BLASTER CRICKET GROUND</h2>
-    <img src="./logo.jpeg" alt="masterblaster" class="center"><br>
+    <img  src="./logo.jpeg" alt="masterblaster" class="center"><br>
     <div class="login">
     <form id="input" method="get" action="login.php">
         <label><h1>Place: Kampaala patti</h1>
-            <h2>Saturday & sunday practice match available req details</h2>
+            <h3>Saturday & sunday practice match available req details</h3>
         </label>
         <h3>Sunday Morning 7:30 AM 1st Ball</h3>
         
@@ -20,30 +20,38 @@
 {
     margin: 0;
     padding: 0;
-    background-image: url("logo.jpeg");
-    background-color:#30a4f1ba;
+    background-image: url("cricket-pitch-sport-grass-field-empty-background-cricket-pitch-sport-grass-field-empty-background-146687259.jpg");
+    background-size: cover;
+    background-color:#4bf716ba;
     font-family: 'Arial';
 }
 #img{
     display: flex;
     align-items: center;
+    margin-bottom: 80px;
 
 }
 .login{
-        width: 382px;
+        width: 50%;
         overflow: hidden;
         margin: auto;
+        background-image: url("logo.jpeg");
         margin: 20 0 0 450px;
         padding: 80px;
-        background: #83abe7;
+        background: #b9e90c;
         border-radius: 30px ;
 
 }
 h2{
     text-align: center;
+    font-style: oblique;
+    font-weight: 999;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: rgb(7, 247, 27);
+    background-image: url("logo.jpeg");
+    font-size: 50px;
     color: #0804f3;
     padding: 20px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 label{
     color: #7b08ff;
@@ -65,7 +73,8 @@ label{
 
 }
 .center {
-  display: block;
+  display: flex;
+  align-items: center;
   margin-left: auto;
   margin-right: auto;
   width: 10%;
@@ -90,7 +99,7 @@ a{
 } 
 .inPut{
 align-items: center;
-background-image: url("logo.jpeg");
+background-image: url("cricket-pitch-sport-grass-field-empty-background-cricket-pitch-sport-grass-field-empty-background-146687259.jpg");
 border-radius: 8px;
 padding-left: 15px;
 }
@@ -99,12 +108,21 @@ align-items: center;
 border-radius: 8px;
 padding-left: 40px;
 }
+.myTable{
+    background-image: url("logo.jpeg");
+}
+.img{
+    display: grid;
+    justify-content: left;
+    padding-right: 10%;
+}
 </style>
    <body>
 
       <table class="mytable" id="myTable" class="table table-bordered table-striped table-fixed">
          <thead>
-            <th><input class="inPut" itemscope="" type="text" id="name" placeholder="Team Name"></th>
+            <th><img class="img" src="./logo.jpeg" alt="masterblaster" width="50"><br>
+                <input class="inPut" itemscope="" type="text" id="name" placeholder="Team Name"></th>
             <th><input class="inPut" type="text" id="name" placeholder="Team Name"></th>
          </thead>
          <thead>
